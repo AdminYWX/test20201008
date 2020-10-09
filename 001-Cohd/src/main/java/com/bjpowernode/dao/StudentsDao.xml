@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bjpowernode.dao.StudentsDao">
+    <!--查询语句-->
+    <select id="selectStudent" resultType="Students">
+        select id,name,age from students order by id
+    </select>
+    <!--新增语句-->
+    <insert id="interlStudent">
+        insert into students(name,age) values (#{name},#{age})
+    </insert>
+</mapper>
